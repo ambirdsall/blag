@@ -1,11 +1,6 @@
-# MARKDOWN SPEC
-
-## Headers
-
-Preface with hashtag(s) as usual.
-
-Use CSS selector syntax on the hastags for classes. (e.g. ##.foo.bar)
-
-Use equals sign for id. Id before classes always. (e.g. #=foo.bar.baz)
-
-## 
+* The blog is organized by topic.
+* Each post has one topic and one title;
+  each topic has one title.
+* Topics are an <ol> from most- to least-recent;
+  within a topic, posts are a <ul> from least- to most-recent.
+* Posts are written in rho.
