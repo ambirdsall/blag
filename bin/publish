@@ -5,4 +5,7 @@
 
 co gh_pages
 gr -
-l
+middleman build --clean
+shipit
+fuck build/
+co-
