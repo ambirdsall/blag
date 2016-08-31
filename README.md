@@ -1,5 +1,10 @@
 # Blog
-Posts are written in [Jade](jade-lang.com)
+Posts are written in [Rho](inca.github.io/rho) and the layout is written in
+[Jade](jade-lang.com). It's a middleman site.
+
+Scripts for any custom shit I wish to do live in `bin/`. I symlink them to
+`node_modules/.bin`, because `PATH=./node_modules/.bin:$PATH`, but you got to
+live your own life.
 
 ### Organization of posts
 * The blog is organized by topic.
