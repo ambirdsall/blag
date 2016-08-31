@@ -19,10 +19,14 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 activate :syntax, :line_numbers => true
 activate :directory_indexes
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.build_before = true
+end
 
-###
-# Helpers
-###
+configure :development do
+  activate :livereload
+end
 
 activate :blog do |blog|
 
@@ -48,10 +52,10 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", layout: false
-# Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-end
+
+###
+# Helpers
+###
 
 # Methods defined in the helpers block are available in templates
 helpers do

@@ -8,6 +8,7 @@ gem 'middleman', '~> 4.1'
 gem 'middleman-blog'
 gem 'middleman-syntax'
 gem 'middleman-livereload'
+gem 'middleman-deploy'
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 gem 'slim'
