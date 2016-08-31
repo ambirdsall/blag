@@ -12,12 +12,13 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 # With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
+page '/index.html', layout: :index_layout
 
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 activate :syntax, :line_numbers => true
+activate :directory_indexes
 
 ###
 # Helpers
@@ -35,7 +36,7 @@ activate :blog do |blog|
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
-  blog.default_extension = ".md"
+  blog.default_extension = ".md.erb"
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
@@ -53,17 +54,26 @@ configure :development do
 end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def titleize(string)
+    string.downcase.gsub(' ', '-').gsub(/[^a-z\d-]/, '')
+  end
+
+  def section(title)
+    <<~EOMD
+      <h3 id="#{titleize title}">
+        #{title}
+        <a class="section__title" href="##{titleize title}">§</a>
+      </h2>
+    EOMD
+  end
+end
 
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 end
