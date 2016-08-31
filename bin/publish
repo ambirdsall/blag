@@ -6,6 +6,7 @@
 co gh_pages
 gr -
 middleman build --clean
-shipit
-fuck build/
+g add build
+arh
+SHIPIT
 co-
