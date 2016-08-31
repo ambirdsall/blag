@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ambirdsall/blag#readme",
   "dependencies": {
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "lodash": "^4.15.0"
   }
 }
