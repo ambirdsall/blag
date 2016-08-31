@@ -1,5 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 
-git checkout gh_pages
-git rebase -
-echo 'check it out!'
+# this makes heavy use of my own personal aliases
+# cf. https://www.github.com/ambirdsall/.dotfiles
+
+co gh_pages
+gr -
+l
