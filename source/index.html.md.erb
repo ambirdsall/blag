@@ -1,18 +1,15 @@
-# Oh hey
+<% require 'pry' %>
+# ambirdsall
 
-``` ruby
-puts "hey there, I'm a code block"
-15.times do |i|
-  do_something i.think
-end
-```
+<%
+articles_by_topic = blog.articles.group_by {|a| a.data.topic}
+articles_by_topic.each do |topic, list|
+  topic_name = topic.titleize
+%>
+### <%= topic_name %>
 
-<%= section('This is a section') %>
-And then some text.
-
-And other stuff.
-
-<% 15.times do |i| %>
-  <%= "Paragraph number #{i+1}!!!\n" %>
+<% list.each do |article| %>
+  * <%= article.title %>
+<% end %>
 
 <% end %>
