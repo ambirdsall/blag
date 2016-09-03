@@ -1,5 +1,5 @@
 ---
-title: Berkeley DB Design Lessons
+title: Design Lessons
 category: quotes
 topic: software_design
 date: 2016-08-31 01:16:08 -0700
@@ -7,8 +7,20 @@ date: 2016-08-31 01:16:08 -0700
 
 Taken from the [Berkeley DB](http://www.aosabook.org/en/bdb.html) section of
 [The Architecture of Open-Source
-Applications](http://www.aosabook.org/en/index.html)
+Applications](http://www.aosabook.org/en/index.html), which breaks up its
+discussion of the application's specific architecture with general lessons
+and aphorisms. Read the whole thing, it's great.
 
+There's a grimness to these that I find utterly charming: [lesson
+3](#design-lesson-3) warns "[s]oftware architecture degrades in direct
+proportion to the number of changes made to the software: bug fixes corrode the
+layering and new features stress design." It's an approach that treats software
+design in general and object orientation in specific (OO as in "code that goes
+'not my job, you figure it out'", not as in "code that is organized with
+classes") not like a matter of artistic composition so much as intellectual
+sanitation. It's a dirty world out there: wash your ass.
+
+---
 <%= section('Design Lesson 1') %>
 
 It is vital for any complex software package's testing and maintenance that the
