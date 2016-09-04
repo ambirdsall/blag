@@ -1,3 +1,5 @@
+* { box-sizing: border-box; }
+
 @import 'syntax_highlighting';
 
 body {
@@ -66,4 +68,6 @@ hr {
   text-decoration: none;
 }
 
-* { box-sizing: border-box; }
+.post-img {
+  max-width: 100%;
+}
