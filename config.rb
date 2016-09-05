@@ -29,7 +29,8 @@ configure :development do
 end
 
 activate :blog do |blog|
-  blog.permalink = "blag/{category}/{title}.html"
+  blog.prefix = 'blag'
+  blog.permalink = "{title}.html"
   # Matcher for blog source files
   blog.sources = "posts/{year}-{month}-{day}_{title}.html"
   # blog.taglink = "tags/{tag}.html"
