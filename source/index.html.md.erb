@@ -10,7 +10,7 @@
 %>
 ### <%= topic.titleize %>
 
-<% list.sort_by(&:date).each do |article| %>
+<% list.each do |article| %>
 * <%= link_to article.title, article.url %>
 <% end # the blank line following prevents the <h3> being nested inside the list %>
 
